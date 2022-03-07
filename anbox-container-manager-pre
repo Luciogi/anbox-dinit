@@ -1,0 +1,4 @@
+type		= scripted
+command		= /usr/bin/bash /etc/dinit.d/anbox.d/anbox-container-manager_script
+stop-command	= /usr/bin/bash /etc/dinit.d/anbox.d/anbox-container-manager_stop
+logfile 	= /var/lib/dinit.d/anbox-container-manager

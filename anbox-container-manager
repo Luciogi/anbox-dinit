@@ -2,8 +2,8 @@
 # Note: the "lxc" package is required! If you installed this with original PKGBUILD, Ignore this note.
 
 type		= process
-command		= /usr/bin/bash /etc/dinit.d/anbox.d/anbox-container-manager_script && /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --container-network-gateway=192.168.250.1 --container-network-address=192.168.250.2
-# command	= && /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --android-image=/var/lib/anbox/android.img
-stop-command	= /usr/bin/bash /etc/dinit.d/anbox.d/anbox-container-manager_stop
-depends-on	= mount mount-all sysusers cgropus fuse net-lo
-waits-for	= firewall
+command		= /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --container-network-gateway=192.168.250.1 --container-network-address=192.168.250.2
+# command	= /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --android-image=/var/lib/anbox/android.img
+# stop-command	= /usr/bin/bash /etc/dinit.d/anbox.d/anbox-container-manager_stop
+depends-on	= mount mount-all sysusers cgropus fuse net-lo anbox-container-manager-pre
+waits-for	= network
