@@ -11,7 +11,7 @@ Anbox is a project for running android apps on other Linux-based operating syste
 
 ### Step 1: Installing binder & ashmem modules
 
-#### The first way: you can using linux-zen package.
+#### The first way: you can use linux-zen package.
 
 installing on artix linux:
 
