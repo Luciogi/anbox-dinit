@@ -56,13 +56,13 @@ makepkg -si
 ````
 ### Step 5: Enabling services
 Enable `anbox-container-manager`:
-**Note: for `dinitctl` command, you need root access. for normal users use `sudo` before `pacman`**
+**Note: for `dinitctl` command, you need root access. for normal users use `sudo` before `dinitctl`**
 ````
 dinitctl start anbox-container-manager # For loading in this session
 dinitctl enable anbox-container-manager # For loading in startup
 ````
 Enable `anbox-session-manager`:
-**Note: No longer need this**
+**Note: No longer needed**
 ````
 dinitctl start anbox-session-manager # For loading in this session
 dinitctl enable anbox-session-manager # For loading in startup
@@ -71,8 +71,7 @@ dinitctl enable anbox-session-manager # For loading in startup
 Done!
 
 ## License
-Copyright (C) 2022 Mobin2008
-This project lisenced with LGPLv3-or-later
+
 
 ## Screenshots
 
