@@ -3,7 +3,7 @@
 
 type		= process
 command		= /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --container-network-gateway=192.168.250.1 --container-network-address=192.168.250.2
-# command	= /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --android-image=/var/lib/anbox/android.img
-# stop-command	= /usr/bin/bash /etc/dinit.d/anbox.d/anbox-container-manager_stop
+#command	= /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --android-image=/var/lib/anbox/android.img
+logfile		= /var/log/dinit.d/anbox-container-manager
 depends-on	= mount mount-all sysusers cgropus fuse net-lo anbox-container-manager-pre
 waits-for	= network
