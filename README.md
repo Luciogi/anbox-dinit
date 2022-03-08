@@ -16,6 +16,7 @@ Anbox is a project for running android apps on other Linux-based operating syste
 install on artix linux:
 
 **Note: for `pacman` command, you need root access. normal users use `sudo` before `pacman`**
+
 `pacman -S linux-zen`
 
 #### The second method: compiling linux kernel from source with ashmem & binder
