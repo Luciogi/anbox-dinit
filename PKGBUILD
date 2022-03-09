@@ -11,7 +11,7 @@ source=('anbox-container-manager'
         'anbox-container-manager_script'
         'anbox-container-manager_stop'
         'anbox-session-manager')
-sha256sums=('cd16c521f4d8b5c6ec2f3c9b11f97dd16e7a257d7064d7f46dbe3c9699047777'
+sha256sums=('4404d742612c7eba98ba14ef5654c617ea50fb002a000a46333de1fbeaaddf1c'
             '5dd7b901cca2bd1312906e397133f9c1d956d157d4c2ebbf5bbe7360b4589311'
             'd236d41b01dd58e8ffa6bae5dd837ccf00822fe78e3d774dd1ec00099cd5b8a8'
             '4301b7c79a4c69800859d8030d2e2c8ec4eb1d4b4ef66c6780c3be32ff547d93'

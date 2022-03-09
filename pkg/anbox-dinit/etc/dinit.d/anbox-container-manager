@@ -6,6 +6,7 @@ command         = /usr/bin/anbox container-manager --daemon --privileged --data-
 #command        = /usr/bin/anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --android-image=/var/lib/anbox/android.img
 logfile         = /var/log/dinit/anbox-container-manager.log
 depends-on      = mount
+depends-on      = mount-all
 depends-on      = sysusers
 depends-on      = cgroups
 depends-on      = fuse
