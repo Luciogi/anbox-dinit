@@ -73,6 +73,11 @@ dinitctl enable anbox-session-manager # For loading in startup
 Done!
 
 ## License
+Copyright (C) 2022 Mobin Aydinfar
+
+GPLv3
+
+For more info, visit LICENSE
 
 ## Screenshots
 
