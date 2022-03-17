@@ -8,7 +8,7 @@ pkgdesc="dinit service scripts for Anbox"
 depends=('dinit' 'anbox-nosystemd-git' 'fuse-dinit')
 source=('anbox-container-manager'
         'anbox-container-manager-pre'
-        'anbox-container-manager_script'
+        'anbox-container-manager_start'
         'anbox-container-manager_stop'
 #        'anbox-session-manager')
 sha256sums=('4404d742612c7eba98ba14ef5654c617ea50fb002a000a46333de1fbeaaddf1c'
@@ -19,7 +19,7 @@ sha256sums=('4404d742612c7eba98ba14ef5654c617ea50fb002a000a46333de1fbeaaddf1c'
 package() {
   install -Dm 644  "$srcdir/anbox-container-manager"  "$pkgdir/etc/dinit.d/anbox-container-manager"
   install -Dm 644  "$srcdir/anbox-container-manager-pre"  "$pkgdir/etc/dinit.d/anbox-container-manager-pre"
-  install -Dm 744  "$srcdir/anbox-container-manager_script"  "$pkgdir/etc/dinit.d/anbox.d/anbox-container-manager_script"
+  install -Dm 744  "$srcdir/anbox-container-manager_start"  "$pkgdir/etc/dinit.d/anbox.d/anbox-container-manager_start"
   install -Dm 744  "$srcdir/anbox-container-manager_stop"  "$pkgdir/etc/dinit.d/anbox.d/anbox-container-manager_stop"
 #  install -Dm 644  "$srcdir/anbox-session-manager"    "$pkgdir/etc/dinit.d/anbox-session-manager"
 }
