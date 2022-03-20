@@ -15,9 +15,7 @@ Anbox is a project for running android apps on other Linux-based operating syste
 
 install on artix linux:
 
-**Note: for `pacman` command, you need root access. normal users use `sudo` before `pacman`**
-
-`pacman -S linux-zen`
+`sudo pacman -S linux-zen`
 
 #### The second method: compiling linux kernel from source with ashmem & binder
 
@@ -29,24 +27,21 @@ When enabling the anbox support option, the binder and ashmem modules are built-
 
 ### Step 3: Mounting binderfs
 
-**Note: You need root access for this. normal users use `sudo` before commands**
+Create binderfs directory:`sudo mkdir /dev/binderfs`
 
-Create binderfs directory:`mkdir /dev/binderfs`
+Mount binder for this session:`sudo mount -t binder binder /dev/binderfs`
 
-Mount binder for this session:`mount -t binder binder /dev/binderfs`
-
-set binderfs on `/dev/fstab/` always, for mounting binderfs by system: 
+set binderfs on `/etc/fstab/`, for mounting binderfs by system in boot process: 
 ````
 binder                         /dev/binderfs binder   nofail  0      0
 ````
 ### Step 4: Install anbox
 Install anbox-nosystemd-git:
-**Note: for `pacman` command, you need root access. normal users use `sudo` before `pacman`**
 ````
 cd ~
 git clone https://github.com/Luciogi/artix_pkg.git
-cd artix_pkg/anbox-systemd-git
-pacman -S --needed base-devel
+cd artix_pkg/anbox-nosystemd-git
+sudo pacman -S --needed base-devel
 makepkg -si
 ````
 Install anbox-dinit(This project):
@@ -58,16 +53,15 @@ makepkg -si
 ````
 ### Step 5: Enable services
 Enable `anbox-container-manager`:
-**Note: for `dinitctl` command, you need root access. normal users use `sudo` before `dinitctl`**
 ````
-dinitctl start anbox-container-manager # For loading in this session
-dinitctl enable anbox-container-manager # For loading in startup
+sudo dinitctl start anbox-container-manager # For loading in this session
+sudo dinitctl enable anbox-container-manager # For loading in startup
 ````
 Enable `anbox-session-manager`:
 **Note: No longer needed**
 ````
-dinitctl start anbox-session-manager # For loading in this session
-dinitctl enable anbox-session-manager # For loading in startup
+sudo dinitctl start anbox-session-manager # For loading in this session
+sudo dinitctl enable anbox-session-manager # For loading in startup
 ````
 ### Step 6: Use anbox xD
 Done!
