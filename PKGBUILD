@@ -3,19 +3,21 @@
 pkgname=anbox-dinit
 pkgver=1
 pkgrel=1
-arch=('x86_64')
-pkgdesc="dinit service scripts for Anbox"
+arch=(any)
+pkgdesc="Dinit service scripts for Anbox"
 depends=('dinit' 'anbox-nosystemd-git' 'fuse-dinit')
 source=('anbox-container-manager'
         'anbox-container-manager-pre'
         'anbox-container-manager_start'
         'anbox-container-manager_stop'
-#        'anbox-session-manager')
+        #'anbox-session-manager'
+	)
 sha256sums=('4404d742612c7eba98ba14ef5654c617ea50fb002a000a46333de1fbeaaddf1c'
-            '6dd8f2a7ea9f219377a36c7084fa575675213c9fde09a47cfa02b6166ec11268'
-            'd236d41b01dd58e8ffa6bae5dd837ccf00822fe78e3d774dd1ec00099cd5b8a8'
-            '4301b7c79a4c69800859d8030d2e2c8ec4eb1d4b4ef66c6780c3be32ff547d93'
-#            '83b1566d0e2fdbe864cc606c7e2d9411768c29cc7ad01eb5302b280105007071')
+            '4857754a6579f9a1a4d8587e3bab6b04cfcafd5486dcf159462211f1f494227d'
+            '73c8d27e910a610078d689e6f9c261207652ae39682348b0f33c1c957273eef9'
+            'd7aa40dd5a7ad03148f9b92e0f1622496a4bf124584ef13ad39646566bddef40'
+            #'83b1566d0e2fdbe864cc606c7e2d9411768c29cc7ad01eb5302b280105007071'
+	    )
 package() {
   install -Dm 644  "$srcdir/anbox-container-manager"  "$pkgdir/etc/dinit.d/anbox-container-manager"
   install -Dm 644  "$srcdir/anbox-container-manager-pre"  "$pkgdir/etc/dinit.d/anbox-container-manager-pre"
