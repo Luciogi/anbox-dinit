@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/sh
 
 	if ip link show anbox0 >/dev/null 2>&1; then
 		echo "Removing anbox0 network interface"
